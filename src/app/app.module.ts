@@ -1,18 +1,43 @@
+// Angular Imports //
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Angular Material & PrimeNG Imports //
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {FileUploadModule} from 'primeng/fileupload';
+import {HttpClientModule} from '@angular/common/http';
+import {ButtonModule} from 'primeng/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Services Imports //
+import { JSLOADERService } from './Services/JSLOADER/jsloader.service';
+
+// Components Imports //
+import { HomeComponent } from './components/Homescreen/home/home.component';
+import { AboutUsComponent } from './components/Homescreen/about-us/about-us.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
+    // Angular Imports //
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    // Angular Material & PrimeNG Imports //
+    MatToolbarModule,
+    FileUploadModule,
+    HttpClientModule,
+    ButtonModule
   ],
-  providers: [],
+  providers: [
+    JSLOADERService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
