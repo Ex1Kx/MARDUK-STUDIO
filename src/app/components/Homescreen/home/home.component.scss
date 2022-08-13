@@ -287,7 +287,7 @@ header.sticky{
 	transition: all .40s;
 }
 .layer:hover{
-	background: linear-gradient(rgba(0,0,0,0.5) 0%, #191919);
+	background: #000;
 }
 .layer h3{
 	position: absolute;
@@ -339,11 +339,10 @@ header.sticky{
 	cursor: pointer;
 }
 .s img{
-	height: 65px;
-	width: 65px;
-	background: #f75124;
+	height: 100%;
+	width: 100%;
 	padding: 15px;
-	border-radius: 50%;
+	border-radius: 10%;
 	margin-bottom: 20px;
 }
 .s.s-tow img{
@@ -359,11 +358,13 @@ header.sticky{
 	font-size: 24px;
 	font-weight: 500;
 	margin-bottom: 2px;
+  text-align: center;
 }
 .row h5{
 	font-size: 17px;
 	font-weight: 500;
 	margin-bottom: 19px;
+  text-align: center;
 }
 .row p{
 	font-size: 1.1rem;
