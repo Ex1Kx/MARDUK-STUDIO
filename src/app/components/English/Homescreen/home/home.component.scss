@@ -63,6 +63,9 @@ header{
 .navlist a:hover::after{
 	width: 100%;
 }
+.navbarlist{
+	cursor: pointer;
+}
 #menu-icon{
 	font-size: 35px;
 	color: #000;
@@ -393,13 +396,13 @@ header.sticky{
 	cursor: pointer;
 }
 .one{
-	background: #baebcd;
+	background: #fff;
 }
 .two{
-	background: #D9D1FA;
+	background: #fff;
 }
 .three{
-	background: #faedce;
+	background: #fff;
 }
 .wrap h3{
 	font-size: 24px;
@@ -420,7 +423,7 @@ header.sticky{
 	justify-content: center;
 	text-align: center;
 	border-radius: 12px;
-	background-image: url(../../../../assets/img/Homescreen/intro.png);
+	background-image: url(../../../../../assets/img/Homescreen/intro.png);
 	background-size: cover;
 }
 .center h3{
@@ -504,7 +507,6 @@ header.sticky{
 		left: 0;
 		right: 0;
 		flex-direction: column;
-		background: var(--main-color);
 		text-align: right;
 		transition: all .40s;
 	}
@@ -512,18 +514,21 @@ header.sticky{
 		display: block;
 		padding: 1.2rem;
 		margin: 1.5rem;
-		border-right: 2px solid var(--bg-color);
-		color: var(--bg-color);
+		border-right: 2px solid #6719f7;
+		color: #000;
 	}
 	.navlist a:hover{
-		background: var(--bg-color);
-		color: var(--main-color);
+		background: #fff;
+		color: #6719f7;
 	}
 	.navlist a::after{
 		display: none;
 	}
 	.navlist.active{
 		top: 100%;
+	}
+	.top-btn{
+		display: none;
 	}
 }
 

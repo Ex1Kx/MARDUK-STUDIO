@@ -23,4 +23,20 @@ export class HomeComponent implements OnInit {
 
   }
 
+  // Smooth Scroll Section //
+  toHome(){
+    document.getElementById("home")?.scrollIntoView({behavior: "smooth"});
+  }
+  toAbout(){
+    document.getElementById("about")?.scrollIntoView({behavior: "smooth"});
+  }
+  toProjects(){
+    document.getElementById("projects")?.scrollIntoView({behavior: "smooth"});
+  }
+  toTeam(){
+    document.getElementById("team")?.scrollIntoView({behavior: "smooth"});
+  }
+  toContact(){
+    document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});
+  }
 }

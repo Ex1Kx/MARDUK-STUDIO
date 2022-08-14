@@ -1,32 +1,30 @@
+<!--Head Section-->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+	<!---Link References For UI-->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
+<!--Body Start-->
 <body>
-
   <!--Header Section-->
   <header>
-		<a href="#" class="logo"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
+		<a class="logo"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
 		<div class="bx bx-menu" id="menu-icon"></div>
-
 		<ul class="navlist">
-			<li><a href="#home">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#portfolio">Projects</a></li>
-			<li><a href="#service">Our Team</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<!--Navbar-->
+			<li><a (click)="toHome()" class="navbarlist">Home</a></li>
+			<li><a (click)="toAbout()" class="navbarlist">About</a></li>
+			<li><a (click)="toProjects()" class="navbarlist">Projects</a></li>
+			<li><a (click)="toTeam()" class="navbarlist">Our Team</a></li>
+			<li><a (click)="toContact()" class="navbarlist">Contact</a></li>
+			<li><a routerLink="/Es" class="navbarlist">Change To Es</a></li>
 		</ul>
 		<a href="#" class="top-btn">Discover NYX</a>
 	</header>
-
   <!--Main Section-->
   <section class="home" id="home">
 		<div class="home-text">
@@ -36,64 +34,61 @@
 			<p>Find out who we are, what we do, what we have done<br> and discover new projects we are developing just for you.</p>
 			<div class="social">
 				<a href="https://www.facebook.com/gaming/TheMarduckProject"><i class='bx bxl-facebook'></i></a>
-				<a href="#"><i class='bx bxl-twitter' ></i></a>
-				<a href="https://www.instagram.com/the_marduck_project/"><i class='bx bxl-instagram' ></i></a>
+				<a href="https://twitter.com/MarduckProject"><i class='bx bxl-twitter' ></i></a>
+				<a href="https://www.instagram.com/the_marduck_project/"><i class='bx bxl-instagram'></i></a>
+				<a href="https://discord.gg/rjXsfEmEBW"><i class='bx bxl-discord'></i></a>
 			</div>
 			<a href="#" class="btn">Learn More</a>
 		</div>
-
 		<div class="home-img">
 			<img src="../../../../assets/img/Homescreen/main.png">
 		</div>
 	</section>
-
-	<!--------About---->
+	<!--About Us Section-->
 	<section class="about" id="about">
 		<div class="about-img">
 			<img src="../../../../assets/img/Homescreen/about.png">
 		</div>
-
 		<div class="about-text">
-			<h3>About Us</h3>
+			<h3>ABOUT US</h3>
 			<h2>We are a studio of indie developers</h2>
 			<p>We are a group of people who seek to develop quality and innovative software without the pressure of a large company and where each person will be listened to and taken into account for all the projects that are carried out in THE MARDUCK PROJECT.</p>
 			<a href="#" class="btn">Find out more about us</a>
 		</div>
 	</section>
-
-	<!--------portfolio---->
-	<section class="portfolio" id="portfolio">
+	<!--Projects Section-->
+	<section class="portfolio" id="projects">
 		<div class="heading">
-			<h3>Projects</h3>
+			<h3>PROJECTS</h3>
 			<h2>All our works and projects</h2>
 			<p>Much more about us and enjoy the other projects developed by THE MARDUCK PROJECT.</p>
 		</div>
-
 		<div class="portfolio-content">
 			<div class="col">
 				<img src="../../../../assets/img/Projects/stay_and_play.png">
 				<div class="layer">
 					<h3>Stay And Play</h3>
+					<h5>2020</h5>
 				</div>
 			</div>
-
 			<div class="col">
 				<img src="../../../../assets/img/Projects/animal_paws.png">
 				<div class="layer">
 					<h3>Animal Paws</h3>
+					<h5>2021-2022</h5>
 				</div>
 			</div>
-
 			<div class="col">
 				<img src="../../../../assets/img/Projects/nyx.png">
 				<div class="layer">
 					<h3>NYX</h3>
+					<h5>2022-2024</h5>
 				</div>
 			</div>
     </div>
 	</section>
 
-	<section class="service" id="service">
+	<section class="service" id="team">
 		<div class="heading">
 			<h3>OUR TEAM</h3>
 			<h2>Who we are and what we do</h2>
@@ -103,25 +98,25 @@
 		<div class="service-content">
 			<div class="row">
 				<div class="s s-one">
-					<img src="https://c.wallhere.com/photos/fb/13/Hu_Tao_Genshin_Impact_Genshin_Impact_anime_anime_girls_red_eyes_4K_black_hair_artwork-2088607.jpg!d">
+					<img src="../../../../../assets/img/Team/julian.png">
 				</div>
-				<h3>Julian Lozada <span>Æ✗1</span></h3>
+				<h3>Julián Lozada <span>Æ✗1</span></h3>
 				<h5>CEO & FULLSTACK DEVELOPER</h5>
         <h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
 			</div>
 
 			<div class="row">
 				<div class="s s-one">
-					<img src="https://i.pinimg.com/originals/10/91/94/1091948c6b80b65b9eef8c163f0ae42a.jpg">
+					<img src="../../../../../assets/img/Team/valentina.png">
 				</div>
-        <h3>Valentina Lopez</h3>
+        <h3>Valentina López</h3>
 				<h5>PIXELART & ANIMATOR ARTIST</h5>
         <h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
 			</div>
 
 			<div class="row">
 				<div class="s s-one">
-					<img src="https://cdn.discordapp.com/attachments/925024576210083882/1007836234409836564/WhatsApp_Image_2022-08-10_at_4.51.06_PM.jpeg">
+					<img src="../../../../../assets/img/Team/mariana.png">
 				</div>
         <h3>Mariana Tacán</h3>
 				<h5>CHARACTER DESIGNER</h5>
@@ -129,15 +124,15 @@
 			</div>
       <div class="row">
         <div class="s s-one">
-					<img src="https://cdn.discordapp.com/attachments/925024576210083882/1007841775546806292/WhatsApp_Image_2022-08-12_at_9.38.48_PM.jpeg">
+					<img src="../../../../../assets/img/Team/edgar.png">
 				</div>
-        <h3>Edgar Marquez <span>Chempay</span></h3>
+        <h3>Edgar Marqués <span>Chempay</span></h3>
 				<h5>MUSIC COMPOSER</h5>
         <h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
 			</div>
       <div class="row">
         <div class="s s-one">
-					<img src="https://cdn.discordapp.com/attachments/925024576210083882/1007843163353927710/WhatsApp_Image_2022-08-12_at_9.38.18_PM.jpeg">
+					<img src="../../../../../assets/img/Team/manuela.png">
 				</div>
         <h3>Manuela Serna <span>Yuimsv</span></h3>
 				<h5>KAIRI VOICE ACTRESS</h5>
@@ -145,7 +140,7 @@
 			</div>
       <div class="row">
         <div class="s s-one">
-					<img src="https://cdn.discordapp.com/attachments/925024576210083882/1007844990212374538/WhatsApp_Image_2022-08-12_at_9.39.10_PM.jpeg">
+					<img src="../../../../../assets/img/Team/angie.png">
 				</div>
         <h3>Angie Lugo <span>Humming Moon</span></h3>
 				<h5>CHARACTER & BACKGROUND ARTIST</h5>
@@ -153,39 +148,50 @@
 			</div>
       <div class="row">
         <div class="s s-one">
-					<img src="https://cdn.discordapp.com/attachments/925024576210083882/1007852546137784350/WhatsApp_Image_2022-08-12_at_10.17.33_PM.jpeg">
+					<img src="../../../../../assets/img/Team/nicole.png">
 				</div>
         <h3>Nicole Isaramá <span>Nayla</span></h3>
 				<h5>LILLY VOICE ACTRESS</h5>
         <h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
 			</div>
-
+			<div class="row">
+				<div class="s s-one">
+							<img src="../../../../../assets/img/Team/johan.png">
+						</div>
+				<h3>Johan Castro</h3>
+						<h5>SCREENWRITER</h5>
+				<h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
+					</div>
+					<div class="row">
+					<div class="s s-one">
+							<img src="../../../../../assets/img/Team/dulce.png">
+						</div>
+				<h3>Dulce García</h3>
+								<h5>3D ARTIST & SCREENWRITER</h5>
+				<h5 href="#" class="dev-btn"><span>See More About Me</span></h5>
+						</div>
+					
 		</div>
 	</section>
 
 
-	<section class="cta">
+	<section class="cta" id="contact">
 		<div class="heading">
-			<h2>We are working soon this section will be available</h2>
+			<h3>CONTACT</h3>
+			<h2>Do you want to promote yourself or look for an opportunity with us?</h2>
+			<P>Contact THE MARDUCK PROJECT for your promotional projects or any questions you may have about us.</P>
 		</div>
 
 		<div class="cta-box">
-			<div class="wrap one">
-				<h3>we will be available soon :D</h3>
-			</div>
+			<a href="https://twitter.com/MarduckProject"><div class="wrap one">
+			<h3>Twitter</h3>
+			</div></a>
 
-			<div class="wrap two">
-        <h3>we will be available soon :D</h3>
-			</div>
-
-			<div class="wrap three">
-        <h3>we will be available soon :D</h3>
-			</div>
-
+		<a href="mailto:themarduckprojectbusiness@gmail.com"><div class="wrap two">
+        <h3>Email</h3>
+			</div></a>
 		</div>
 	</section>
-
-
 	<div class="ends">
 		<p>THE MARDUCK PROJECT © 2022</p>
 	</div>
