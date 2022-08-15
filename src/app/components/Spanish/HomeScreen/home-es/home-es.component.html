@@ -1,0 +1,198 @@
+<!--Head Section-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!---Link References For UI-->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<!--Body Start-->
+<body>
+  <!--Header Section-->
+  <header>
+		<a class="logo"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		<ul class="navlist">
+			<!--Navbar-->
+			<li><a (click)="toHome()" class="navbarlist">Inicio</a></li>
+			<li><a (click)="toAbout()" class="navbarlist">Sobre Nosotros</a></li>
+			<li><a (click)="toProjects()" class="navbarlist">Proyectos</a></li>
+			<li><a (click)="toTeam()" class="navbarlist">Nuestro Equipo</a></li>
+			<li><a (click)="toContact()" class="navbarlist">Contacto</a></li>
+			<li><a routerLink="/En" class="navbarlist">Cambiar A En</a></li>
+		</ul>
+		<a href="#" class="top-btn">Descubre NYX</a>
+	</header>
+  <!--Main Section-->
+  <section class="home" id="home">
+		<div class="home-text">
+			<h3>Explora Un</h3>
+			<h1>Nuevo Mundo</h1>
+			<h5>Con Nosotros Cualquier Idea <span>Es Posible</span></h5>
+			<p>Encuentra quiénes somos, qué hacemos, qué hemos hecho y descubre los nuevos proyectos que estamos desarrollando para ti.</p>
+			<div class="social">
+				<a href="https://www.facebook.com/gaming/TheMarduckProject"><i class='bx bxl-facebook'></i></a>
+				<a href="https://twitter.com/MarduckProject"><i class='bx bxl-twitter' ></i></a>
+				<a href="https://www.instagram.com/the_marduck_project/"><i class='bx bxl-instagram'></i></a>
+				<a href="https://discord.gg/rjXsfEmEBW"><i class='bx bxl-discord'></i></a>
+			</div>
+			<a href="#" class="btn">Leer Más</a>
+		</div>
+		<div class="home-img">
+			<img src="../../../../assets/img/Homescreen/main.png">
+		</div>
+	</section>
+	<!--About Us Section-->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="../../../../assets/img/Homescreen/about.png">
+		</div>
+		<div class="about-text">
+			<h3>SOBRE NOSOTROS</h3>
+			<h2>Somos un grupo de desarrolladores indie</h2>
+			<p>Somos un grupo de personas que buscamos desarrollar un software de calidad e innovador sin la presión de una gran empresa y donde cada persona será escuchada y tenida en cuenta para todos los proyectos que se realicen en THE MARDUCK PROJECT.</p>
+			<a href="#" class="btn">Obtén más información sobre nosotros</a>
+		</div>
+	</section>
+	<!--Projects Section-->
+	<section class="portfolio" id="projects">
+		<div class="heading">
+			<h3>PROYECTOS</h3>
+			<h2>Todos nuestros trabajos y proyectos</h2>
+			<p>Mucho más sobre nosotros y disfruta de los proyectos desarrollados por THE MARDUCK PROJECT.</p>
+		</div>
+		<div class="portfolio-content">
+			<div class="col">
+				<img src="../../../../assets/img/Projects/stay_and_play.png">
+				<div class="layer">
+					<h3>Stay And Play</h3>
+					<h5>2020</h5>
+				</div>
+			</div>
+			<div class="col">
+				<img src="../../../../assets/img/Projects/animal_paws.png">
+				<div class="layer">
+					<h3>Animal Paws</h3>
+					<h5>2021-2022</h5>
+				</div>
+			</div>
+			<div class="col">
+				<img src="../../../../assets/img/Projects/nyx.png">
+				<div class="layer">
+					<h3>NYX</h3>
+					<h5>2022-2024</h5>
+				</div>
+			</div>
+    </div>
+	</section>
+
+	<section class="service" id="team">
+		<div class="heading">
+			<h3>NUESTRO EQUIPO</h3>
+			<h2>Quiénes somos y qué hacemos</h2>
+			<p>Aquí puedes ver información sobre cada miembro y su función dentro de THE MARDUCK PROJECT.</p>
+		</div>
+
+		<div class="service-content">
+			<div class="row">
+				<div class="s s-one">
+					<img src="../../../../../assets/img/Team/julian.png">
+				</div>
+				<h3>Julián Lozada <span>Æ✗1</span></h3>
+				<h5>CEO & DESARROLLADOR FULLSTACK</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+
+			<div class="row">
+				<div class="s s-one">
+					<img src="../../../../../assets/img/Team/valentina.png">
+				</div>
+        <h3>Valentina López</h3>
+				<h5>ARTISTA DE PIXELART & ANIMADORA</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+
+			<div class="row">
+				<div class="s s-one">
+					<img src="../../../../../assets/img/Team/mariana.png">
+				</div>
+        <h3>Mariana Tacán</h3>
+				<h5>DISEÑADORA DE PERSONAJES</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+      <div class="row">
+        <div class="s s-one">
+					<img src="../../../../../assets/img/Team/edgar.png">
+				</div>
+        <h3>Edgar Marqués <span>Chempay</span></h3>
+				<h5>COMPOSITOR MUSICAL</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+      <div class="row">
+        <div class="s s-one">
+					<img src="../../../../../assets/img/Team/manuela.png">
+				</div>
+        <h3>Manuela Serna <span>Yuimsv</span></h3>
+				<h5>ACTRIZ DE VOZ DE KAIRI</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+      <div class="row">
+        <div class="s s-one">
+					<img src="../../../../../assets/img/Team/angie.png">
+				</div>
+        <h3>Angie Lugo <span>Humming Moon</span></h3>
+				<h5>ARTISTA DE PERSONAJES & FONDOS</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+      <div class="row">
+        <div class="s s-one">
+					<img src="../../../../../assets/img/Team/nicole.png">
+				</div>
+        <h3>Nicole Isaramá <span>Nayla</span></h3>
+				<h5>ACTRIZ DE VOZ DE LILLY</h5>
+        <h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+			</div>
+			<div class="row">
+				<div class="s s-one">
+							<img src="../../../../../assets/img/Team/johan.png">
+						</div>
+				<h3>Johan Castro</h3>
+						<h5>GUIONISTA</h5>
+				<h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+					</div>
+					<div class="row">
+					<div class="s s-one">
+							<img src="../../../../../assets/img/Team/dulce.png">
+						</div>
+				<h3>Dulce García</h3>
+								<h5>ARTISTA 3D Y GUIONISTA</h5>
+				<h5 href="#" class="dev-btn"><span>Mira Más Sobre Mi</span></h5>
+						</div>
+					
+		</div>
+	</section>
+
+
+	<section class="cta" id="contact">
+		<div class="heading">
+			<h3>CONTACTO</h3>
+			<h2>¿Quieres promocionarte o buscar una oportunidad con nosotros?</h2>
+			<P>Contacta con THE MARDUCK PROJECT para tus proyectos promocionales o para cualquier pregunta que tenga sobre nosotros.</P>
+		</div>
+
+		<div class="cta-box">
+			<a href="https://twitter.com/MarduckProject"><div class="wrap one">
+			<h3>Twitter</h3>
+			</div></a>
+
+		<a href="mailto:themarduckprojectbusiness@gmail.com"><div class="wrap two">
+        <h3>Email</h3>
+			</div></a>
+		</div>
+	</section>
+	<div class="ends">
+		<p>THE MARDUCK PROJECT © 2022</p>
+	</div>
+</body>

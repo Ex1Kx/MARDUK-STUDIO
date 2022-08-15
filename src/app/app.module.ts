@@ -15,14 +15,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JSLOADERService } from './Services/JSLOADER/jsloader.service';
 
 // Components Imports //
-import { HomeComponent } from './components/Homescreen/home/home.component';
-import { AboutUsComponent } from './components/Homescreen/about-us/about-us.component';
+import { HomeComponent } from './components/English/Homescreen/home/home.component';
+import { AboutUsComponent } from './components/English/Homescreen/about-us/about-us.component';
+import { HomeEsComponent } from './components/Spanish/HomeScreen/home-es/home-es.component';
+import { AboutEsComponent } from './components/Spanish/HomeScreen/about-es/about-es.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    HomeEsComponent,
+    AboutEsComponent
   ],
   imports: [
     // Angular Imports //
