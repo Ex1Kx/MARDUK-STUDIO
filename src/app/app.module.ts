@@ -1,6 +1,7 @@
 // Angular Imports //
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Angular Material & PrimeNG Imports //
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -10,37 +11,35 @@ import {ButtonModule} from 'primeng/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-// Services Imports //
-import { JSLOADERService } from './Services/JSLOADER/jsloader.service';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 // Components Imports //
-import { HomeComponent } from './components/English/Homescreen/home/home.component';
-import { AboutUsComponent } from './components/English/Homescreen/about-us/about-us.component';
-import { HomeEsComponent } from './components/Spanish/HomeScreen/home-es/home-es.component';
-import { AboutEsComponent } from './components/Spanish/HomeScreen/about-es/about-es.component';
-
+import { HomeComponent } from './components/Homescreen/home/home.component';
+import { AboutUsComponent } from './components/Homescreen/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutUsComponent,
-    HomeEsComponent,
-    AboutEsComponent
   ],
   imports: [
     // Angular Imports //
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     // Angular Material & PrimeNG Imports //
     MatToolbarModule,
     FileUploadModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    SplitButtonModule,
+    MatSlideToggleModule,
+    MatSelectModule,
   ],
   providers: [
-    JSLOADERService
   ],
   bootstrap: [AppComponent]
 })

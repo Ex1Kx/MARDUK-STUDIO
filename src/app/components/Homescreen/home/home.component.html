@@ -1,0 +1,291 @@
+<!--Head Section-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!---Link References For UI-->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<!--Body Start-->
+<body>
+  <!--Header Section-->
+  <header [ngClass]="{'sticky-header': enableSticky}">
+		<a class="logo"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		<ul class="navlist">
+			<!--Navbar-->
+			<li><a (click)="toHome()" class="navbarlist"><i class="fa-solid fa-house"></i> Home</a></li>
+			<li><a (click)="toAbout()" class="navbarlist"><i class="fa-solid fa-circle-info"></i> About</a></li>
+			<li><a (click)="toProjects()" class="navbarlist"><i class="fa-solid fa-screwdriver-wrench"></i> Projects</a></li>
+			<li><a (click)="toTeam()" class="navbarlist"><i class="fa-solid fa-users"></i> Our Team</a></li>
+			<li><a (click)="toContact()" class="navbarlist"><i class="fa-solid fa-phone"></i> Contact</a></li>
+		</ul>
+			<mat-form-field appearance="fill">
+  			<mat-label>Select Language</mat-label>
+ 			<mat-select>
+    		<mat-option *ngFor="let lang of langs" [value]="lang.value">
+      		{{lang.viewValue}}
+    		</mat-option>
+  			</mat-select>
+			</mat-form-field>
+			<mat-slide-toggle class="dark-btn"></mat-slide-toggle>
+	</header>
+  <!--Main Section-->
+  <section class="home" id="home">
+		<div class="home-text">
+			<h3>Meet A</h3>
+			<h1>New World</h1>
+			<h5>With Us Every Idea <span>Is Possible</span></h5>
+			<p>Find out who we are, what we do, what we have done<br> and discover new projects we are developing just for you.</p>
+			<div class="social">
+				<a href="https://www.facebook.com/gaming/TheMarduckProject"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://twitter.com/MarduckProject"><i class="fa-brands fa-twitter"></i></a>
+				<a href="https://www.instagram.com/the_marduck_project/"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://discord.gg/rjXsfEmEBW"><i class="fa-brands fa-discord"></i></a>
+			</div>
+			<a href="#" class="btn">Learn More <i class="fa-solid fa-magnifying-glass"></i></a>
+		</div>
+		<div class="home-img">
+			<img src="../../../../assets/img/Homescreen/main.png">
+		</div>
+	</section>
+	<!--About Us Section-->
+	<section class="about" id="about">
+		<div class="about-img" data-aos="fade-up-right" data-aos-duration="1500">
+			<img src="../../../../assets/img/Homescreen/about.png">
+		</div>
+		<div class="about-text" data-aos="fade-left" data-aos-duration="1500">
+			<h3>ABOUT US</h3>
+			<h2>We are a studio of indie developers</h2>
+			<p>We are a group of people who seek to develop quality and innovative software without the pressure of a large company and where each person will be listened to and taken into account for all the projects that are carried out in <span>THE MARDUCK PROJECT.</span></p>
+			<a href="#" class="btn">Find out more about us <i class="fa-solid fa-magnifying-glass"></i></a>
+		</div>
+	</section>
+	<!--Projects Section-->
+	<section class="portfolio" id="projects">
+		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
+			<h3>PROJECTS</h3>
+			<h2>All our works and projects</h2>
+			<p>Much more about us and enjoy the other projects developed by THE MARDUCK PROJECT.</p>
+		</div>
+		<!--Stay And Play-->
+		<div class="portfolio-content" >
+			<div class="col" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Projects/stay_and_play.png">
+				<div class="layer">
+					<h3>Stay And Play</h3>
+					<h5>2020</h5>
+				</div>
+			</div>
+			<!--Animal Paws-->
+			<div class="col" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Projects/animal_paws.png">
+				<div class="layer">
+					<h3>Animal Paws</h3>
+					<h5>2021</h5>
+				</div>
+			</div>
+			<!--NYX-->
+			<div class="col" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Projects/nyx.png">
+				<div class="layer">
+					<h3>NYX</h3>
+					<h5>2022</h5>
+				</div>
+			</div>
+    	</div>
+	</section>
+	<!--Our Team Section-->
+	<section class="service" id="team">
+		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
+			<h3>OUR TEAM</h3>
+			<h2>Who we are and what we do</h2>
+			<p>Here you can see information about each member and their role within THE MARDUCK PROJECT.</p>
+		</div>
+		<div class="service-content" data-aos="fade-up" data-aos-duration="1500">
+			<!--Æ✗1-->
+			<div class="card">
+				<div class="card-img">
+					<img src="../../../../assets/img/Team/julian.png" alt="">
+				</div>
+				<div class="cont-cards">
+					<div class="details">
+						<h2>Julian Lozada <span class="user">Æ✗1</span><br><span class="dev">DEVELOPER</span></h2>
+						<div class="data-cards">
+							<h3>FullStack<br><span><i class="fa-solid fa-gamepad"></i> StayAndPlay</span></h3>
+							<h3>FullStack<br><span><i class="fa-solid fa-paw"></i> Animal Paws</span></h3>
+							<h3>Developer<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+						</div>
+						<div class="card-btn">
+							<button>See More About Me</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Valentina-->
+			<div class="card">
+				<div class="card-img">
+					<img src="../../../../assets/img/Team/valentina.png" alt="">
+				</div>
+				<div class="cont-cards">
+					<div class="details">
+						<h2>Valentina López<br><span class="anm">ANIMATOR</span></h2>
+						<div class="data-cards-one">
+							<h3>PIXELART & ANIMATOR ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+						</div>
+						<div class="card-btn">
+							<button>See More About Me</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Mariana-->
+			<div class="card">
+				<div class="card-img">
+					<img src="../../../../assets/img/Team/mariana.png" alt="">
+				</div>
+				<div class="cont-cards">
+					<div class="details">
+						<h2>Mariana Tacán<br><span class="art">ARTIST</span></h2>
+						<div class="data-cards-one">
+							<h3>CHARACTER DESIGNER<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+						</div>
+						<div class="card-btn">
+							<button>See More About Me</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Edgar-->
+			<div class="card">
+				<div class="card-img">
+					<img src="../../../../assets/img/Team/edgar.png" alt="">
+				</div>
+				<div class="cont-cards">
+					<div class="details">
+						<h2>Edgar Marqués <span class="user">Chempay</span> <br><span class="com">COMPOSER</span></h2>
+						<div class="data-cards-one">
+							<h3>MUSIC COMPOSER & CATTERINA<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+						</div>
+						<div class="card-btn">
+							<button>See More About Me</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--Manuela-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/manuela.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Manuela Serna <span class="user">Yuimsv</span><br><span class="voi">VOICE ACTRESS</span></h2>
+					<div class="data-cards">
+						<h3>Astrid Paws<br><span><i class="fa-solid fa-paw"></i> Animal Paws</span></h3>
+						<h3>Kairi Nozomi / Izumi Kimura<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>
+					<div class="card-btn">
+						<button>See More About Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Angie-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/angie.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Angie Lugo <span class="user">Humming Moon</span><br><span class="art">ARTIST</span></h2>
+					<div class="data-cards">
+						<h3>Developer<br><span><i class="fa-solid fa-paw"></i> Animal Paws</span></h3>
+						<h3>BACKGROUND ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>
+					<div class="card-btn">
+						<button>See More About Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Nicole-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/nicole.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Nicole Isaramá <span class="user">Nayla</span><br><span class="voi">VOICE ACTRESS</span></h2>
+					<div class="data-cards-one">
+						<h3>Lilly Bancroftt<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>
+					<div class="card-btn">
+						<button>See More About Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Johan-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/johan.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Johan Castro<br><span class="scr">SCREENWRITER</span></h2>
+					<div class="data-cards">
+						<h3>Developer<br><span><i class="fa-solid fa-gamepad"></i> StayAndPlay</span></h3>
+						<h3>Screenwriter<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>
+					<div class="card-btn">
+						<button>See More About Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Dulce-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/dulce.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Dulce García<br><span class="art">ARTIST</span></h2>
+					<div class="data-cards-one">
+						<h3>3d Artist<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>
+					<div class="card-btn">
+						<button>See More About Me</button>
+					</div>
+				</div>
+			</div>
+		</div>			
+		</div>
+	</section>
+
+	<!--Contact & Settings Section-->
+	<section class="cta" id="contact">
+		<div class="heading">
+			<h3>CONTACT</h3>
+			<h2>Do you want to promote yourself or look for an opportunity with us?</h2>
+			<P>Contact THE MARDUCK PROJECT for your promotional projects or any questions you may have about us.</P>
+		</div>
+
+		<div class="cta-box">
+			<a href="https://twitter.com/MarduckProject"><div class="wrap one">
+			<h3>Twitter</h3>
+			</div></a>
+
+		<a href="mailto:themarduckprojectbusiness@gmail.com"><div class="wrap two">
+        <h3>Email</h3>
+			</div></a>
+		</div>
+	</section>
+
+	<!--Footer-->
+	<div class="ends">
+		<p>THE MARDUCK PROJECT © 2022</p>
+	</div>
+</body>
