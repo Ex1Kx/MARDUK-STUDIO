@@ -2,14 +2,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { fromEvent} from 'rxjs';
-// FontAwesome Icons //
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
 
 // Interface Languages //
 interface Languages{
@@ -30,13 +22,8 @@ export class HomeComponent implements OnInit {
   ];
   // Sticky Menu //
   enableSticky=false;
-  // FontAwesome Icons //
-  HomeIcon = faHome;
-  UsersIcon = faUsers;
-  LightbulbIcon = faLightbulb;
-  PeopleGroupIcon = faPeopleGroup;
-  GearIcon = faGear;
-  Facebook = faFacebook;
+  // Responsive Menu //
+  isMenuOpen = false;
 
   constructor(
     // Services //
@@ -72,7 +59,9 @@ export class HomeComponent implements OnInit {
   toTeam(){
     document.getElementById("team")?.scrollIntoView({behavior: "smooth"});
   }
-  toContact(){
-    document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});
+  toAccount(){
+    document.getElementById("account")?.scrollIntoView({behavior: "smooth"});
   }
+  // Responsive Menu //
+  menuVariable:boolean = false;
 }
