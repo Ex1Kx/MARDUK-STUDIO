@@ -1,6 +1,7 @@
 // Angular Imports //
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/ThemesServices/theme.service';
 import { fromEvent} from 'rxjs';
 
 // Interface Languages //
@@ -24,14 +25,18 @@ export class HomeComponent implements OnInit {
   enableSticky=false;
   // Responsive Menu //
   isMenuOpen = false;
+  // DarkMode //
+  isDarkMode!: boolean;
 
   constructor(
     // Services //
+    private themeService: ThemeService,
     @Inject(DOCUMENT)
     private document:Document
   ) 
   {
-
+    this.themeService.initTheme();
+    this.isDarkMode = this.themeService.isDarkMode();
   }
   ngOnInit(): void {
     // Navbar Section //
@@ -64,4 +69,12 @@ export class HomeComponent implements OnInit {
   }
   // Responsive Menu //
   menuVariable:boolean = false;
+  // DarkMode //
+  toggleDarkMode(){
+    this.isDarkMode = this.themeService.isDarkMode();
+
+    this.isDarkMode
+      ? this.themeService.update('light-mode')
+      : this.themeService.update('dark-mode');
+  }
 }

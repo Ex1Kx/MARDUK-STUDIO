@@ -30,7 +30,7 @@
     		</mat-option>
   			</mat-select>
 			</mat-form-field>
-			<div class="dark-btn"><mat-slide-toggle></mat-slide-toggle></div>
+			<mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode">Dark Mode</mat-slide-toggle>
 	</header>
   <!--Main Section-->
   <section class="home" id="home">
@@ -38,7 +38,7 @@
 			<h3>Meet A</h3>
 			<h1>New World</h1>
 			<h5>With Us Every Idea <span>Is Possible</span>✨</h5>
-			<p>Find out who we are, what we do, what we have done<br> and discover new projects we are developing just for you.</p>
+			<div class="ph1"><p>Find out who we are, what we do, what we have done<br> and discover new projects we are developing just for you.</p></div>
 			<div class="social">
 				<a href="https://www.facebook.com/MardukStudio"><i class="fa-brands fa-facebook"></i></a>
 				<a href="https://twitter.com/MardukStudio"><i class="fa-brands fa-twitter"></i></a>
@@ -120,7 +120,7 @@
 							<h3>Developer<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me</button>
+							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 							<h3>PIXELART & ANIMATOR ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me</button>
+							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -154,7 +154,7 @@
 							<h3>CHARACTER DESIGNER<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me</button>
+							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
 							<h3>MUSIC COMPOSER & CATTERINA<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me</button>
+							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 						<h3>Kairi Nozomi / Izumi Kimura<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -207,7 +207,7 @@
 						<h3>BACKGROUND ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -224,7 +224,7 @@
 						<h3>Lilly Bancroftt<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -242,7 +242,7 @@
 						<h3>Screenwriter<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -259,7 +259,7 @@
 						<h3>3d Artist<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -275,7 +275,7 @@
 						<h3>Developer<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me</button>
+						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -290,6 +290,7 @@
 			<h2>The new way to use our services</h2>
 			<P>Create a <span>MARDUK ACCOUNT</span> and you will be able to use, synchronize and benefit from our services.</P>
 		</div>
+		
 	</section>
 
 	<!--Footer-->

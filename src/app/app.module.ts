@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 // Angular Material & PrimeNG Imports //
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -27,6 +28,7 @@ import { AboutUsComponent } from './components/Homescreen/about-us/about-us.comp
   imports: [
     // Angular Imports //
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
