@@ -12,7 +12,7 @@
 <body>
   <!--Header Section-->
   <header [ngClass]="{'sticky-header': enableSticky}">
-		<a class="logo"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
+		<a class="logo" (click)="toHome()"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
 		<div class="bx bx-menu" id="menu-icon" [class.menuClass]="menuVariable"></div>
 		<ul class="navlist">
 			<!--Navbar-->
@@ -30,7 +30,7 @@
     		</mat-option>
   			</mat-select>
 			</mat-form-field>
-			<mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode">Dark Mode</mat-slide-toggle>
+			<mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode"><div class="moon"><i class="fa-solid fa-moon"></i></div></mat-slide-toggle>
 	</header>
   <!--Main Section-->
   <section class="home" id="home">
@@ -46,7 +46,7 @@
 				<a href="https://www.youtube.com/channel/UCJHtdLT79Wqtcg0Snwjc4bA"><i class="fa-brands fa-youtube"></i></a>
 				<a href="https://discord.gg/rjXsfEmEBW"><i class="fa-brands fa-discord"></i></a>
 			</div>
-			<a href="#" class="btn">Learn More <i class="fa-solid fa-magnifying-glass"></i></a>
+			<a (click)="showWIP()" class="btn">Learn More <i class="fa-solid fa-magnifying-glass"></i></a>
 		</div>
 		<div class="home-img">
 			<img src="../../../../assets/img/Homescreen/main.png">
@@ -60,8 +60,8 @@
 		<div class="about-text" data-aos="fade-left" data-aos-duration="1500">
 			<h3><i class="fa-solid fa-circle-info"></i> ABOUT US</h3>
 			<h2>We are a studio of indie developers</h2>
-			<p>We are a group of people who seek to develop quality and innovative software without the pressure of a large company and where each person will be listened to and taken into account for all the projects that are carried out in <span>MARDUK STUDIO.</span></p>
-			<a href="#" class="btn">Find out more about us <i class="fa-solid fa-magnifying-glass"></i></a>
+			<p>We are a group of people who seek to develop quality and innovative software without the pressure of a large company and where each person will be listened to and taken into account for all the projects that are carried out in <span>MARDUK STUDIO</span>.</p>
+			<a (click)="showWIP()" class="btn">Find out more about us <i class="fa-solid fa-magnifying-glass"></i></a>
 		</div>
 	</section>
 	<!--Projects Section-->
@@ -73,7 +73,7 @@
 		</div>
 		<!--Stay And Play-->
 		<div class="projects-content" >
-			<div class="prj" data-aos="fade-up" data-aos-duration="1500">
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500" (click)="showWIP()">
 				<img src="../../../../assets/img/Projects/stay_and_play.png">
 				<div class="layer">
 					<h3>Stay And Play</h3>
@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			<!--Animal Paws-->
-			<div class="prj" data-aos="fade-up" data-aos-duration="1500">
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500" (click)="showWIP()">
 				<img src="../../../../assets/img/Projects/animal_paws.png">
 				<div class="layer">
 					<h3>Animal Paws</h3>
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 			<!--NYX-->
-			<div class="prj" data-aos="fade-up" data-aos-duration="1500">
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500" (click)="showWIP()">
 				<img src="../../../../assets/img/Projects/nyx.png">
 				<div class="layer">
 					<h3>NYX</h3>
@@ -120,7 +120,7 @@
 							<h3>Developer<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+							<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 							<h3>PIXELART & ANIMATOR ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+							<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -154,7 +154,7 @@
 							<h3>CHARACTER DESIGNER<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+							<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
 							<h3>MUSIC COMPOSER & CATTERINA<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+							<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -185,11 +185,11 @@
 				<div class="details">
 					<h2>Manuela Serna <span class="user">Yuimsv</span><br><span class="voi">VOICE ACTRESS</span></h2>
 					<div class="data-cards">
-						<h3>Astrid Paws<br><span><i class="fa-solid fa-paw"></i> Animal Paws</span></h3>
+						<h3>Astrid Pats<br><span><i class="fa-solid fa-paw"></i> Animal Paws</span></h3>
 						<h3>Kairi Nozomi / Izumi Kimura<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -207,7 +207,7 @@
 						<h3>BACKGROUND ARTIST<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -224,7 +224,7 @@
 						<h3>Lilly Bancroftt<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -242,7 +242,7 @@
 						<h3>Screenwriter<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -259,7 +259,7 @@
 						<h3>3d Artist<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -275,7 +275,7 @@
 						<h3>Developer<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 					</div>
 					<div class="card-btn">
-						<button>See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
+						<button (click)="showWIP()">See More About Me <i class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
 				</div>
 			</div>
@@ -284,24 +284,35 @@
 	</section>
 
 	<!--Marduk Account Section-->
-	<section class="cta" id="account">
-		<div class="heading">
+	<section class="more-to-love" id="account">
+		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
 			<h3><i class="fa-solid fa-circle-user"></i> MARDUK ACCOUNT</h3>
 			<h2>The new way to use our services</h2>
 			<P>Create a <span>MARDUK ACCOUNT</span> and you will be able to use, synchronize and benefit from our services.</P>
 		</div>
+		<section class="about" id="about">
+			<div class="about-img" data-aos="fade-up-right" data-aos-duration="1500">
+				<img src="../../../../assets/img/Homescreen/account.png">
+			</div>
+			<div class="about-text" data-aos="fade-left" data-aos-duration="1500">
+				<h3><i class="fa-solid fa-face-laugh-beam"></i> Meet The New MARDUK ACCOUNT</h3>
+				<h2>Use <span>MARDUK</span> to the max</h2>
+				<p>By creating a <span>MARDUK</span> account you will have access to all the applications developed by the studio, you can share your experience in them through our social section as well as get rewards within them participate in closed betas and have exclusive benefits just for having it so do not wait any longer and create one now.</p>
+				<a (click)="showWIP()" class="btn">Create your account now <i class="fa-solid fa-circle-user"></i></a>
+			</div>
+		</section>
 		
-	</section>
+	  </section>
 
 	<!--Footer-->
 	<footer class="main-footer">
 		<div class="container">
 		  <div class="footer-nav-container">
 			<nav class="footer-nav">
-			  <a routerLink="/Login/En"><i class="fa-solid fa-phone"></i> CONTACT US</a>
-			  <a routerLink="/AboutUs/En"><i class="fa-solid fa-handshake-simple"></i> JOIN US</a>
-			  <a routerLink="/Privacy/En"><i class="fa-solid fa-lock"></i> PRIVACY</a>
-			  <a routerLink="/TermsOfServices/En"><i class="fa-solid fa-hand-holding-heart"></i> SUPPORT US</a>
+			  <a (click)="showWIP()"><i class="fa-solid fa-phone"></i> CONTACT US</a>
+			  <a (click)="showWIP()"><i class="fa-solid fa-handshake-simple"></i> JOIN US</a>
+			  <a (click)="showWIP()"><i class="fa-solid fa-lock"></i> PRIVACY</a>
+			  <a (click)="showWIP()"><i class="fa-solid fa-hand-holding-heart"></i> SUPPORT US</a>
 			</nav>
 		  </div>
 		  <ul class="footer-bottom">

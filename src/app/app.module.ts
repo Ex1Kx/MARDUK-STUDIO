@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 
-// Angular Material & PrimeNG Imports //
+// External Dependences //
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
@@ -15,7 +15,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SplitButtonModule} from 'primeng/splitbutton';
 import {MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http'
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 // Components Imports //
 import { HomeComponent } from './components/Homescreen/home/home.component';
 import { AboutUsComponent } from './components/Homescreen/about-us/about-us.component';
@@ -40,6 +46,15 @@ import { AboutUsComponent } from './components/Homescreen/about-us/about-us.comp
     SplitButtonModule,
     MatSlideToggleModule,
     MatSelectModule,
+    SweetAlert2Module.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      isolate: true,
+    }),
   ],
   providers: [
   ],

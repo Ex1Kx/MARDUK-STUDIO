@@ -3,6 +3,8 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { ThemeService } from 'src/app/services/ThemesServices/theme.service';
 import { fromEvent} from 'rxjs';
+import Swal from 'sweetalert2'
+import { TranslateService } from '@ngx-translate/core';
 
 // Interface Languages //
 interface Languages{
@@ -32,11 +34,14 @@ export class HomeComponent implements OnInit {
     // Services //
     private themeService: ThemeService,
     @Inject(DOCUMENT)
-    private document:Document
+    private document:Document,
+    translate: TranslateService
   ) 
   {
     this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
+    translate.setDefaultLang('en');
+    translate.use('en');
   }
   ngOnInit(): void {
     // Navbar Section //
@@ -77,4 +82,13 @@ export class HomeComponent implements OnInit {
       ? this.themeService.update('light-mode')
       : this.themeService.update('dark-mode');
   }
+  // Work In Progress Alert //
+  showWIP(){
+    Swal.fire({
+      icon: 'error',
+      title: 'We are very sorry :(',
+      text: 'We are still working on this section come back later to see it.',
+    })
+  }
+  // Translate Locale //
 }

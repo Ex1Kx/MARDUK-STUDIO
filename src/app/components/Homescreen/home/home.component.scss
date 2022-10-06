@@ -37,6 +37,7 @@ header{
 	max-width: 100%;
 	width: 210px;
 	height: auto;
+	cursor: pointer;
 }
 .navlist{
 	display: flex;
@@ -76,7 +77,11 @@ header{
 	cursor: pointer;
 	display: none;
 }
-
+.moon{
+	font-size: 1.0rem;
+	color: #6719f7;
+	padding: 10px;
+}
 
 // Home Section //
 section{
@@ -166,6 +171,7 @@ span{
 	grid-template-columns: repeat(2, 2fr);
 	align-items: center;
 	grid-gap: 2rem;
+	overflow-y: hidden;
 }
 .about-img img{
 	max-width: 100%;
@@ -283,8 +289,8 @@ span{
 // Team Cards Section //
 .team-content{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, auto));
-	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	grid-gap: 60px;
 	align-items: center;
 	margin-top: 5rem;
 }
@@ -417,8 +423,9 @@ span{
 	color: orange;
 }
 
-// Marduk Account Section //
 
+// Marduk Account Section //
+  
 
 // Footer Section //
 .main-footer .container {
@@ -446,6 +453,7 @@ span{
 	color: #4A00E0;
 	padding: 22px 0;
 	font-size: 1.0rem;
+	cursor: pointer;
 }
 .footer-bottom {
 	display: flex;
