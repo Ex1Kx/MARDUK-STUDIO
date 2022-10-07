@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
     translate.setDefaultLang('en');
-    translate.use('en');
+    translate.use('es');
   }
   ngOnInit(): void {
     // Navbar Section //
