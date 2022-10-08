@@ -40,6 +40,12 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette,);
 .light-mode .sticky-header{
   background-color: #fff;
 }
+.light-mode .dropdown-content{
+  background-color: #fff;
+}
+.light-mode .dropdown-content a:hover{
+  background-color: #f1f1f1;
+}
 
 
 // DarkMode Section //
@@ -57,6 +63,12 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette,);
 }
 .dark-mode .navbarlist{
   color: #fff;
+}
+.dark-mode .dropdown-content{
+  background-color: #121212;
+}
+.dark-mode .dropdown-content a:hover{
+  background-color: #1e1e1e;
 }
 .dark-mode .sticky-header{
   background-color: #1e1e1e;

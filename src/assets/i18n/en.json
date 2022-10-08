@@ -5,6 +5,7 @@
     "projects-nav": "Projects",
     "team-nav": "Our Team",
     "account-nav": "Marduk Account",
+    "dropdown": "Select Language",
     "h3-home": "Meet A",
     "h1-home": "New World",
     "h5-home": "With Us Every Idea",
@@ -40,5 +41,13 @@
     "ph2-account": "and you will be able to use, synchronize and benefit from our services",
     "sub-h3-account": "Meet The New MARDUK ACCOUNT",
     "sub-h2-account": "Use",
-    "sub-hh2-account": "to the max"
+    "sub-hh2-account": "to the max",
+    "phh1-account": "By creating a",
+    "phh2-account": "you will have access to all the applications developed by the studio, you can share your experience in them through our social section as well as get rewards within them participate in closed betas and have exclusive benefits just for having it so do not wait any longer and create one now",
+    "button-account": "Create your account now",
+    "contact-footer": "CONTACT US",
+    "join-footer": "JOIN US",
+    "privacy-footer": "PRIVACY",
+    "support-footer": "SUPPORT US",
+    "copyright": "ALL RIGHTS RESERVED"
 }

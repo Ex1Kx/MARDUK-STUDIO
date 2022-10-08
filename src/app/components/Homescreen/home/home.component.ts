@@ -5,6 +5,8 @@ import { ThemeService } from 'src/app/services/ThemesServices/theme.service';
 import { fromEvent} from 'rxjs';
 import Swal from 'sweetalert2'
 import { TranslateService } from '@ngx-translate/core';
+import { TranslateEnService } from 'src/app/services/TranslateServices/translate-en.service'
+import { TranslateEsService } from 'src/app/services/TranslateServices/translate-es.service'
 
 // Interface Languages //
 interface Languages{
@@ -35,13 +37,15 @@ export class HomeComponent implements OnInit {
     private themeService: ThemeService,
     @Inject(DOCUMENT)
     private document:Document,
-    translate: TranslateService
+    translate: TranslateService,
+    private TranslateEn: TranslateEnService,
+    private TranslateEs: TranslateEsService
   ) 
   {
     this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
     translate.setDefaultLang('en');
-    translate.use('es');
+    translate.use('en');
   }
   ngOnInit(): void {
     // Navbar Section //
@@ -91,4 +95,10 @@ export class HomeComponent implements OnInit {
     })
   }
   // Translate Locale //
+  changeLanguageEn(type: string) {
+    this.TranslateEn.changeLanguage(type);
+  }
+  changeLanguageEs(type: string) {
+    this.TranslateEn.changeLanguage(type);
+  }
 }
