@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JSLOADERService } from './jsloader.service';
+import { ThemeService } from './theme.service';
 
-describe('JSLOADERService', () => {
-  let service: JSLOADERService;
+describe('ThemeService', () => {
+  let service: ThemeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(JSLOADERService);
+    service = TestBed.inject(ThemeService);
   });
 
   it('should be created', () => {
