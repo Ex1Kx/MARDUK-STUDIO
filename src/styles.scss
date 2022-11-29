@@ -91,6 +91,11 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette,);
 }
 
 
+// Partners Section //
+.dark-mode .partners-title p{
+  color: #fff;
+}
+
 // Other Dependences //
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

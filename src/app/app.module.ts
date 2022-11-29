@@ -25,11 +25,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 // Components Imports //
 import { HomeComponent } from './components/Homescreen/home/home.component';
 import { AboutUsComponent } from './components/Homescreen/about-us/about-us.component';
+import { Ex1Component } from './components/Team/ex1/ex1.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutUsComponent,
+    Ex1Component,
   ],
   imports: [
     // Angular Imports //

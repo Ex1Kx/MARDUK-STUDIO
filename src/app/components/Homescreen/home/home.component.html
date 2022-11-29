@@ -7,9 +7,14 @@
   	<link rel="preconnect" href="https://fonts.googleapis.com">
   	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 </head>
 <!--Body Start-->
 <body>
+
+	
   <!--Header Section-->
   <header [ngClass]="{'sticky-header': enableSticky}">
 		<a class="logo" (click)="toHome()"><img src="../../../../assets/img/Homescreen/logo_png.png"></a>
@@ -25,12 +30,16 @@
 		<div class="dropdown">
 			<button class="dropbtn"><i class="fa-solid fa-language"></i> {{"dropdown" | translate}} <i class="fa-solid fa-caret-down"></i></button>
 			<div class="dropdown-content">
-			<a (click)="changeLanguageEn('en')"><i class="fa-solid fa-earth-europe"></i> English</a>
-			<a (click)="changeLanguageEs('es')"><i class="fa-solid fa-earth-americas"></i> Español</a>
+			<a (click)="changeLanguageEn('en')"><img src="https://img.icons8.com/color/20/null/usa.png"/> English</a>
+			<a (click)="changeLanguageEs('es')"><img src="https://img.icons8.com/color/20/null/spain.png"/> Español</a>
+			<a (click)="changeLanguageEs('fch')"><img src="https://img.icons8.com/color/20/null/france.png"/> Français</a>
+			<a (click)="changeLanguageEs('jp')"><img src="https://img.icons8.com/color/20/null/japan.png"/> ジャパニーズ</a>
 			</div>
 		  </div>
 			<mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode"><div class="moon"><i class="fa-solid fa-moon"></i></div></mat-slide-toggle>
 	</header>
+
+
   <!--Main Section-->
   <section class="home" id="home">
 		<div class="home-text">
@@ -42,6 +51,7 @@
 				<a href="https://www.facebook.com/MardukStudio"><i class="fa-brands fa-facebook"></i></a>
 				<a href="https://twitter.com/MardukStudio"><i class="fa-brands fa-twitter"></i></a>
 				<a href="https://www.instagram.com/mardukstudio/"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://www.tiktok.com/@ex1dev"><i class="fa-brands fa-tiktok"></i></a>
 				<a href="https://www.youtube.com/channel/UCJHtdLT79Wqtcg0Snwjc4bA"><i class="fa-brands fa-youtube"></i></a>
 				<a href="https://discord.gg/rjXsfEmEBW"><i class="fa-brands fa-discord"></i></a>
 			</div>
@@ -51,6 +61,8 @@
 			<img src="../../../../assets/img/Homescreen/main.png">
 		</div>
 	</section>
+
+
 	<!--About Us Section-->
 	<section class="about" id="about">
 		<div class="about-img" data-aos="fade-up-right" data-aos-duration="1500">
@@ -60,9 +72,31 @@
 			<h3><i class="fa-solid fa-circle-info"></i> {{"h3-about" | translate}}</h3>
 			<h2>{{"h2-about" | translate}}</h2>
 			<p>{{"ph1-about" | translate}}<span> MARDUK STUDIO</span>.</p>
-			<a (click)="showWIP()" class="btn">{{"a-about" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+			<a routerLink="AboutUs" class="btn">{{"a-about" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
 		</div>
 	</section>
+
+
+	<!--Latest Videos Section-->
+	<section class="projects">
+		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
+			<h3><i class="fa-brands fa-youtube"></i> {{"h3-videos" | translate}}</h3>
+			<h2>{{"h2-videos" | translate}}</h2>
+			<p>{{"ph1-videos" | translate}} <span>MARDUK STUDIO</span> {{"ph2-videos" | translate}}</p>
+		</div>
+		<!--Animal Paws-->
+		<div class="projects-content" >
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500">
+				<iframe width="350px" height="190px" src="https://www.youtube.com/embed/vet0a7RIvMo" title="Animal Paws Is Now Open Source!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<!--Izumi's Letter-->
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500">
+				<iframe width="350px" height="190px" src="https://www.youtube.com/embed/mUxZqTa7qjY" title="NYX | DEATHCRUSH: Izumis Letter | TEASER 1 | SPANISH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+    	</div>
+	</section>
+
+
 	<!--Projects Section-->
 	<section class="projects" id="projects">
 		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
@@ -95,8 +129,18 @@
 					<h5>2022</h5>
 				</div>
 			</div>
+			<!--NOZOMI-->
+			<div class="prj" data-aos="fade-up" data-aos-duration="1500" (click)="showWIP()">
+				<img src="../../../../assets/img/Projects/nozomi.png">
+				<div class="layer">
+					<h3>NOZOMI</h3>
+					<h5>2022</h5>
+				</div>
+			</div>
     	</div>
 	</section>
+
+
 	<!--Our Team Section-->
 	<section class="team" id="team">
 		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
@@ -119,7 +163,7 @@
 							<h3>FULLSTACK<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
 						</div>
 						<div class="card-btn">
-							<button (click)="showWIP()">{{"button-team" | translate}}  <i class="fa-solid fa-magnifying-glass"></i></button>
+							<button routerLink="/Ex1">{{"button-team" | translate}}  <i class="fa-solid fa-magnifying-glass"></i></button>
 						</div>
 					</div>
 				</div>
@@ -263,6 +307,7 @@
 				</div>
 			</div>
 		</div>
+		<!--Jovannis-->
 		<div class="card">
 			<div class="card-img">
 				<img src="../../../../assets/img/Team/jovannis.png" alt="">
@@ -278,8 +323,131 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<!---Megan-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/megan.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>Megan Pyatt<br><span class="voi">{{"voice-team" | translate}}</span></h2>
+					<div class="data-cards-one">
+						<h3>Kairi Nozomi / Izumi Kimura (English)<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>	
+					<div class="card-btn">
+						<button (click)="showWIP()">{{"button-team" | translate}} <i class="fa-solid fa-magnifying-glass"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--An...-->
+		<div class="card">
+			<div class="card-img">
+				<img src="../../../../assets/img/Team/an.png" alt="">
+			</div>
+			<div class="cont-cards">
+				<div class="details">
+					<h2>¿¿¿???<br><span class="dev">{{"dev-team" | translate}}</span></h2>
+					<div class="data-cards-one">
+						<h3>Soon<br><span><i class="fa-solid fa-moon"></i> NYX</span></h3>
+					</div>	
+					<div class="card-btn">
+						<button (click)="showWIP()">{{"button-team" | translate}} <i class="fa-solid fa-magnifying-glass"></i></button>
+					</div>
+				</div>
+			</div>
 		</div>			
 		</div>
+	</section>
+
+	<!--Partners Section-->
+	<section class="partners" id="partners">
+		<div class="heading" data-aos="fade-down" data-aos-duration="1500">
+			<h3><i class="fa-solid fa-handshake-simple"></i> {{"h3-partners" | translate}}</h3>
+			<h2>{{"h2-partners" | translate}}</h2>
+			<p>{{"ph1-partners" | translate}} <span>MARDUK STUDIO</span> {{"ph2-partners" | translate}}</p>
+		</div>
+		<!--Nix En Teyvat-->
+		<div class="partners-content" >
+		<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/nix_en_teyvat.png">
+				<div class="partner-layer nixenteyvat">
+					<h3>NIX EN TEYVAT</h3>
+					<h5><i class="fa-brands fa-facebook"></i> {{"ph2-net" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+				<h3><i class="fa-solid fa-moon"></i> NIX EN TEYVAT</h3>
+				<p>{{"ph1-net" | translate}}💜</p>
+				<a href="https://www.facebook.com/NixEnTeyvat" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+			</div>
+			</div>
+			<!--Od Games Studio-->
+			<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/od_games_studio.png">
+				<div class="partner-layer odgames">
+					<h3>OD GAMES STUDIO</h3>
+					<h5><i class="fa-solid fa-code"></i> {{"ph2-pal" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+					<h3><i class="fa-solid fa-gamepad"></i> OD GAMES STUDIO</h3>
+					<p>{{"ph1-pal" | translate}}</p>
+					<a href="https://www.facebook.com/ODGamesStudio" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+				</div>
+			</div>
+			<!--Swift Turtle's Studio-->
+			<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/swift_turtle's_studio.png">
+				<div class="partner-layer placeholder">
+					<h3>SWIFT TURTLE'S STUDIO</h3>
+					<h5><i class="fa-solid fa-code"></i> {{"ph2-pal" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+					<h3><i class="fa-solid fa-gamepad"></i> SWIFT TURTLE'S STUDIO</h3>
+					<p>{{"ph1-pal" | translate}}</p>
+					<a href="https://www.facebook.com/Swift-Turtles-Studio-102028069180323" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+				</div>
+			</div>
+			<!--Suck It Up Studios-->
+			<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/suck-it-up-studios.png">
+				<div class="partner-layer placeholder">
+					<h3>SUCK IT UP STUDIOS</h3>
+					<h5><i class="fa-solid fa-code"></i> {{"ph2-pal" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+					<h3><i class="fa-solid fa-gamepad"></i> SUCK IT UP STUDIOS</h3>
+					<p>{{"ph1-pal" | translate}}</p>
+					<a href="https://www.facebook.com/Swift-Turtles-Studio-102028069180323" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+				</div>
+			</div>
+			<!--Estudios Luna-->
+			<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/estudios_luna.png">
+				<div class="partner-layer placeholder">
+					<h3>ESTUDIOS LUNA</h3>
+					<h5><i class="fa-solid fa-code"></i> {{"ph2-pal" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+					<h3><i class="fa-solid fa-gamepad"></i> ESTUDIOS LUNA</h3>
+					<p>{{"ph1-pal" | translate}}</p>
+					<a href="https://www.facebook.com/Swift-Turtles-Studio-102028069180323" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+				</div>
+			</div>
+			<!--Velvet Entertaiments-->
+			<div class="partner-hover" data-aos="fade-up" data-aos-duration="1500">
+				<img src="../../../../assets/img/Partners/velvet_entertainments.png">
+				<div class="partner-layer placeholder">
+					<h3>VELVET ENTERTAINMENTS</h3>
+					<h5><i class="fa-solid fa-code"></i> {{"ph2-pal" | translate}}</h5>
+				</div>
+				<div class="partners-title">
+					<h3><i class="fa-solid fa-gamepad"></i> VELVET ENTERTAIMENTS</h3>
+					<p>{{"ph1-pal" | translate}}</p>
+					<a href="https://www.facebook.com/Swift-Turtles-Studio-102028069180323" class="btn">{{"button-partners" | translate}} <i class="fa-solid fa-magnifying-glass"></i></a>
+				</div>
+			</div>
+    	</div>
 	</section>
 
 	<!--Marduk Account Section-->
